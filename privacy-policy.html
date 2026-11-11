@@ -3,6 +3,83 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0e1116" media="(prefers-color-scheme: dark)">
+  <style>
+    /* Self-contained on purpose. These pages are read inside in-app webviews - including the
+       TikTok mini game's about sheet - and those paint their own backdrop over a transparent
+       page. Without a background of its own the black text lands on a black surface and the
+       page reads as blank, so both colours are stated here instead of inherited. No external
+       stylesheet, font or script is referenced, so nothing can fail to load in a webview. */
+    :root {
+      color-scheme: light dark;
+    }
+
+    html {
+      background-color: #ffffff;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      margin: 0;
+      background-color: #ffffff;
+      color: #14161a;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      font-size: 17px;
+      line-height: 1.65;
+      overflow-wrap: break-word;
+    }
+
+    main {
+      max-width: 46rem;
+      margin: 0 auto;
+      padding: 24px 20px 64px;
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: 1.6rem;
+      line-height: 1.25;
+    }
+
+    h2 {
+      margin: 32px 0 8px;
+      font-size: 1.15rem;
+      line-height: 1.35;
+    }
+
+    p, ul {
+      margin: 0 0 16px;
+    }
+
+    ul {
+      padding-left: 22px;
+    }
+
+    li {
+      margin-bottom: 6px;
+    }
+
+    a {
+      color: #1a4fd6;
+      text-decoration: underline;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      html, body {
+        background-color: #0e1116;
+      }
+
+      body {
+        color: #e7ebf0;
+      }
+
+      a {
+        color: #8ab4ff;
+      }
+    }
+  </style>
   <title>Privacy Notice | CODES CRACKER STUDIOS</title>
 </head>
 <body>
